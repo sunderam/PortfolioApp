@@ -1,10 +1,14 @@
 var express = require('express');
+var path = require('path');
+
 
 var app = express();
 
-app.get('/', function(req, res){
-	res.send("My App");
-});
+app.set('view engine', 'ejs');
+
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(require('./routers/index'));
 
 app.listen(3000, function(){
 	console.log('Runing on server port 3000');
