@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var app = express();
-mongoose.connect('mongodb://sundarbrao:sandy01@portfolio-shard-00-00-ldzdg.mongodb.net:27017,portfolio-shard-00-01-ldzdg.mongodb.net:27017,portfolio-shard-00-02-ldzdg.mongodb.net:27017/test?ssl=true&replicaSet=Portfolio-shard-0&authSource=admin');
+mongoose.connect('mongodb://<username>:<password>@portfolio-shard-00-00-ldzdg.mongodb.net:27017,portfolio-shard-00-01-ldzdg.mongodb.net:27017,portfolio-shard-00-02-ldzdg.mongodb.net:27017/test?ssl=true&replicaSet=Portfolio-shard-0&authSource=admin');
 app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, 'views'));
